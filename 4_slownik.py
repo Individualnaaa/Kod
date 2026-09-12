@@ -1,0 +1,14 @@
+lista_imiona = ["Artur", "Basia", "Celina", "Dawid", "Ewa"]
+
+artur = [0]
+
+slownik_imion = {
+    1: "Artur",
+    2: "Basia",
+    3: "Celina",
+    4: "Dawid",
+    5: "Ewa"
+}
+
+a = slownik_imion[1]
+print(a)
