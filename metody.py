@@ -38,3 +38,23 @@ liczny = {
     "c": 3
 }
 print(liczny)
+
+
+# Ćwiczenie
+
+slownik_owocow = {
+    "klucz": "wartosc",
+    "Artur": "Ananas",
+    "Basia": "Banan",
+    "Celina": "Cytryna",
+    "Dawid": "Daktyle",
+    "Ewa": "Eszeweria"
+}
+
+# Z podanego słownika wyprintuj wszystkie żeńskie imiona
+
+lista_keys = slownik_owocow.keys()
+lista_all = list(lista_keys)
+print(lista_all[2], lista_all[3], lista_all[5])
+
+# TODO
