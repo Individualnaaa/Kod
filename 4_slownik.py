@@ -12,3 +12,4 @@ slownik_imion = {
 
 a = slownik_imion[1]
 print(a)
+ghj
