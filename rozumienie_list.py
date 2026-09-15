@@ -7,4 +7,4 @@ print(lista_poteg)
 
 
 wynik = [liczba ** 2 for liczba in range(1, 6)]
-print("list comprehension ", wynik)
+print("list comprehension ", wynik)168
