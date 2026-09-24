@@ -14,7 +14,6 @@
 
 
 # w conftest jest fixture dla tej funkcji
-
 def test_name_employee(employee_fixture):
     employee = employee_fixture
     assert employee["name"] == "Artur"
@@ -22,3 +21,13 @@ def test_name_employee(employee_fixture):
 def test_name_employee(employee_fixture):
     employee = employee_fixture
     assert employee["age"] == 25
+
+import pytest
+
+# @pytest.mark.test_imienia
+# def test_imie_michal(imie):
+#     print(imie)
+#     assert imie == "Michal"
+
+    # zgłębić ten mark 
+
