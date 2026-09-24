@@ -24,8 +24,38 @@ def test_name_employee(employee_fixture):
 
 import pytest
 
-@pytest.mark.test_imienia
+# pytest testy_python\test_kalkulator.py::test_dodawanie - do terminala-> i wykonuje konkretny test
+
+import logging
+logger = logging.getLogger(__name__)
+
+@pytest.mark.xfail(reason="to celowy błąd")
 def test_imie_michal(employee_fixture):
     print(employee_fixture["name"])
-    assert employee_fixture["name"] == "Artur"
+    logger.warning("jestem warningiem")
+    logger.error("jestem errore")
+    logger.debug("debug")
+    logger.critical("critical")
+    assert employee_fixture["name"] == "Michal"
 
+@pytest.mark.test_imienia
+def test_imie_michal2(employee_fixture):
+    print(employee_fixture["name"])
+    logger.warning("jestem warningiem")
+    logger.error("jestem errore")
+    logger.debug("debug")
+    logger.critical("critical")
+    assert employee_fixture["name"] == "Michal"
+
+@pytest.mark.skip(reason="nope skip")
+def test_imie_michal3(employee_fixture):
+    print(employee_fixture["name"])
+    logger.warning("jestem warningiem")
+    logger.error("jestem errore")
+    logger.debug("debug")
+    logger.critical("critical")
+    assert employee_fixture["name"] == "Michal"
+
+
+
+#logger?

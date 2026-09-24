@@ -12,9 +12,12 @@ def test_odejmowanie():
 
 # pytest testy_python\test_kalkulator.py::test_dodawanie - do terminala-> i wykonuje konkretny test
 
-
+import logging
 # parametryzacja
 import pytest
+
+logger = logging.getLogger(__name__)
+
 @pytest.mark.wip
 @pytest.mark.parametrize("podstawa, wykladnik, oczekiwany_wynik", [
     (2, 3, 8), # krotki tuples
@@ -23,4 +26,11 @@ import pytest
 ])
 
 def test_potegowanie(podstawa, wykladnik, oczekiwany_wynik):
+    logger.info(f"Testujemy potegowanie: {podstawa} do potęgi {wykladnik}")
+    logger.warning("jestem warningiem")
+    logger.error("jestem errore")
+    logger.debug("debug")
+    logger.critical("critical")
     assert potegowanie(podstawa, wykladnik) == oczekiwany_wynik
+
+# czemu nie wyseitla sie logger
