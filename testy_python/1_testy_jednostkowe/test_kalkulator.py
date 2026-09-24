@@ -10,4 +10,17 @@ def test_dodawanie():
 def test_odejmowanie():
     assert odejmowanie(3, 1) == 2
 
-# pytest testy_python\test_kalkulator.py::test_dodawanie - do terminala-> i wykonuje konkretny test z pliku
+# pytest testy_python\test_kalkulator.py::test_dodawanie - do terminala-> i wykonuje konkretny test
+
+
+# parametryzacja
+import pytest
+@pytest.mark.wip
+@pytest.mark.parametrize("podstawa, wykladnik, oczekiwany_wynik", [
+    (2, 3, 8), # krotki tuples
+    (10, 2, 100),
+    (5, 3, 125)
+])
+
+def test_potegowanie(podstawa, wykladnik, oczekiwany_wynik):
+    assert potegowanie(podstawa, wykladnik) == oczekiwany_wynik

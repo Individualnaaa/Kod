@@ -24,10 +24,8 @@ def test_name_employee(employee_fixture):
 
 import pytest
 
-# @pytest.mark.test_imienia
-# def test_imie_michal(imie):
-#     print(imie)
-#     assert imie == "Michal"
-
-    # zgłębić ten mark 
+@pytest.mark.test_imienia
+def test_imie_michal(employee_fixture):
+    print(employee_fixture["name"])
+    assert employee_fixture["name"] == "Artur"
 
