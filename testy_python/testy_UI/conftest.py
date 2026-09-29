@@ -5,9 +5,9 @@ from selenium.webdriver.support.ui import Select
 import pytest
 
 @pytest.fixture
-def setup_driver():
+def driver():
     driver = webdriver.Chrome()
-    driver.implicitly_wait(2)
+    driver.implicitly_wait(5)
     driver.get("http://127.0.0.1:8000")
     yield driver
     driver.quit()
@@ -20,7 +20,7 @@ def logowaniewUI():
     assert driver.find_element(By.ID, "form-title").is_displayed()
 
 @pytest.fixture
-def employeedata():
+def employee_data():
     return {
         "name":"Basia",
         "salary": 1889,
