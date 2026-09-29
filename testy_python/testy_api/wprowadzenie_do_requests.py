@@ -1,5 +1,5 @@
 import requests
-
+# METODA http, endpoint, headers, body
 
 base_url = "http://127.0.0.1:8000/api"
 login_url = f"{base_url}/login"
@@ -15,3 +15,4 @@ my_payload = {
 
 response = requests.post(login_url, headers=my_headers, json=my_payload)
 print(response.json())
+

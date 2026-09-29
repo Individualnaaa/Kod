@@ -11,5 +11,8 @@ markers = [
     "test_imienia: testy imion",
     "wip: testy w trakcie tworzenia",
     "logging: testy z logami",
+    "api_login: testy logownia do api",
+    "site_title: testy nagłówka strony",
+    "logowanieUI: testy logowania na UI"
 ]
 
