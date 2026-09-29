@@ -13,7 +13,7 @@ def driver():
     driver.quit()
 
 @pytest.fixture
-def logowaniewUI():
+def logowaniewUI(driver):
     driver.find_element(By.ID, "username").send_keys("admin")
     driver.find_element(By.ID, "password").send_keys("admin")
     driver.find_element(By.ID, "password").send_keys(Keys.ENTER)
